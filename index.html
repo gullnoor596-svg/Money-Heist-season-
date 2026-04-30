@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Series Hub</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: white;
+    overflow-y: auto;
+}
+
+/* PARTICLES */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #e50914, #7a0008);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    width: 92%;
+    margin: auto;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* BUTTON */
+.download {
+    display: inline-block;
+    margin: 6px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #e50914, #ff2a2a);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.download:active {
+    transform: scale(0.85);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+🎬 SERIES HUB
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Money Heist S1</h3>
+        <a class="download" href="https://pixeldrain.dev/u/aieSWkgZ">⬇ Download 1080p</a>
+        <a class="download" href="https://hub.maverick.lat/434939c640ebae6292c367d61c6a54c2?token=1777532324">⬇ Download 720p</a>
+    </div>
+
+    <div class="card">
+        <h3>Money Heist S2</h3>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=8813&q=720&jio=yes&title=Money-Heist-2018-S02-Complete-Hindi-Dubbed-NF-Series">⬇ Download 1080p</a>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=8803&q=720&jio=yes&title=Money-Heist-2017-S02-Complete-Hindi-NF-Series">⬇ Download 720p</a>
+    </div>
+
+    <div class="card">
+        <h3>Money Heist S3</h3>
+        <a class="download" href="https://mega.nz/file/MlNhRIxK#0Z_GK9n3uVM-HzCcbGYAUSKWZPg0AiB5P3CRJ76YR1E">⬇ Download 1080p</a>
+        <a class="download" href="https://mega.nz/file/50lnHQLQ#4tFr0uzhSYSda0h12ZnGIR3wGIriCdOnBgAtLQzows0">⬇ Download  720p</a>
+    </div>
+
+    <div class="card">
+        <h3>Money Heist S4</h3>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=8821&q=720&jio=yes&title=Money-Heist-2020-S04-Complete-Hindi-NF-Series">⬇ Download 1080p</a>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=8821&q=720&title=Money-Heist-2020-S04-Complete-Hindi-NF-Series">⬇ Download 720p</a>
+    </div>
+
+    <div class="card">
+        <h3>Money Heist S5</h3>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=15134&q=720&jio=yes&title=Money-Heist-Part-2-(2021)-Season-5-Hindi-Dubbed-Netflix-Series">⬇ Download 1080p</a>
+        <a class="download" href="https://www.mp4moviez.care/dl.php?id=15134&q=720&jio=yes&title=Money-Heist-Part-2-(2021)-Season-5-Hindi-Dubbed-Netflix-Series">⬇ Download 720p</a>
+    </div>
+
+</div>
+
+<footer>
+⚡ 720p & 1080p Download UI
+</footer>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<60;i++){
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        r: Math.random()*1.8,
+        dx: (Math.random()-0.5)*0.6,
+        dy: (Math.random()-0.5)*0.6
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    for(let p of particles){
+        ctx.fillStyle = "rgba(229,9,20,0.5)";
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if(p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    }
+
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
