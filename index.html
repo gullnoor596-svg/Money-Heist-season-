@@ -93,26 +93,26 @@ footer {
 
     <div class="card">
         <h3>Money Heist S1</h3>
-        <a class="download" href="https://new6.filesdl.top/cloud/8hi2I5gAzJO0YmL">⬇ Download 1080p</a>
-        <a class="download" href="https://hub.maverick.lat/434939c640ebae6292c367d61c6a54c2?token=1777532324">⬇ Download 720p</a>
+        <a class="download" href="https://pixeldrain.dev/u/AdmDxb4y?download">⬇ Download 1080p</a>
+        <a class="download" href="https://pixeldrain.dev/u/jFVgtrj1?download">⬇ Download 720p</a>
     </div>
 
     <div class="card">
         <h3>Money Heist S2</h3>
         <a class="download" href="https://new6.filesdl.top/cloud/D4SRhLug4q5OPm7">⬇ Download 1080p</a>
-        <a class="download" href="https://mega.nz/file/1wczBSQb#dMaV10bhrbGC2Sjgo9MCgcYSonZBgzJXYQDySP_2EcM">⬇ Download 720p</a>
+        <a class="download" href="https://pixeldrain.dev/u/H5nMTKwQ?download">⬇ Download 720p</a>
     </div>
 
     <div class="card">
         <h3>Money Heist S3</h3>
         <a class="download" href="https://new6.filesdl.top/cloud/bR9fTNHwQUiguKk">⬇ Download 1080p</a>
-        <a class="download" href="https://mega.nz/file/50lnHQLQ#4tFr0uzhSYSda0h12ZnGIR3wGIriCdOnBgAtLQzows0">⬇ Download  720p</a>
+        <a class="download" href="https://pixeldrain.dev/u/VaAYsNcf?download">⬇ Download  720p</a>
     </div>
 
     <div class="card">
         <h3>Money Heist S4</h3>
         <a class="download" href="https://new6.filesdl.top/cloud/MdZ3lzhqV5OAils">⬇ Download 1080p</a>
-        <a class="download" href="https://mega.nz/file/EhtQ3CDB#RIa8Rdq1Qaf2SldiIJWMnL46pDMTArUhNm5OptPUZqU">⬇ Download 720p</a>
+        <a class="download" href="https://pixeldrain.dev/u/JGs8p2wc?download">⬇ Download 720p</a>
     </div>
 
     <div class="card">
@@ -137,35 +137,3 @@ canvas.height = window.innerHeight;
 let particles = [];
 
 for(let i=0;i<60;i++){
-    particles.push({
-        x: Math.random()*canvas.width,
-        y: Math.random()*canvas.height,
-        r: Math.random()*1.8,
-        dx: (Math.random()-0.5)*0.6,
-        dy: (Math.random()-0.5)*0.6
-    });
-}
-
-function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    for(let p of particles){
-        ctx.fillStyle = "rgba(229,9,20,0.5)";
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fill();
-
-        p.x += p.dx;
-        p.y += p.dy;
-
-        if(p.x < 0 || p.x > canvas.width) p.dx *= -1;
-        if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
-    }
-
-    requestAnimationFrame(animate);
-}
-animate();
-</script>
-
-</body>
-</html>
